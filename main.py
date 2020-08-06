@@ -67,20 +67,18 @@ def recognize_cmd(cmd):
 def execute_cmd(cmd):
 
     if cmd == 'ctime':
-        # сказать текущее время
         now = datetime.datetime.now()
         speak("Сейчас " + str(now.hour) + ":" + str(now.minute))
 
     elif cmd == 'radio':
-        # воспроизвести радио
-        os.system("D:\\Jarvis\\res\\radio_record.m3u")
+        os.system("")
 
     elif cmd == 'stupid1':
         # Анекдоты ||| Чтение рандомной строки из файла, кодировка отвечает за чтение кириллицы
         jokes = random.choice(list(open('jokes.txt', encoding="utf-8")))
         speak(jokes)
 
-    elif cmd == 'search':
+    elif cmd == 'search':  # Fail
         print("Секунду")
 
     else:
